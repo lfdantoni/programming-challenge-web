@@ -1,0 +1,37 @@
+<div class="list">
+  <p class="tittle"> Contacts </p>
+  <p class="section">FAVORITE CONTACTS</p>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let contact of dataContacts | favorite:true | sort" 
+        (click)="select(contact)">
+        <a href="#">
+          <div class="contact-img">
+            <img class="img-responsive img-avatar" 
+                  src="{{contact.smallImageURL}}" 
+                  onerror="this.src='/../../assets/User_Small.png';" alt="">
+          </div>
+          <div class="contact-info">
+              <img class="imgFavourite img-responsive" src="./../../assets/Favorite_True.png" alt="">
+              <p class="name">{{contact.name}}</p>
+              <p class="company">{{contact.companyName}}</p>
+          </div>
+        </a>  
+    </li>
+  </ul>
+  <p class="section">OTHER CONTACTS</p>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let contact of dataContacts | favorite:false | sort" 
+        (click)="select(contact)">
+      <a href="#">
+        <img class="img-responsive img-avatar" 
+              src="{{contact.smallImageURL}}"
+              onerror="this.src='/../../assets/User_Small.png';" alt="">
+        <h5 class="name">{{contact.name}}</h5>
+        <p>{{contact.companyName}}</p>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+

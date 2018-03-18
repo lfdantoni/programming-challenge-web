@@ -1,0 +1,45 @@
+.imgFavourite {
+    width: 20px;
+    height: 20px;
+}
+
+.list {
+    height:915px;
+    overflow-y: auto;
+}
+
+.tittle {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.section {
+    font-size: 15px;
+    background: beige;
+    padding: 10px;
+}
+
+.contact-img{
+    width: 60px;
+    float: left;
+}
+
+.contact-img img{
+    width: 60px;
+    height: 60px;
+}
+
+.contact-info {
+    float: left;
+}
+
+.name{
+    display: inline;
+    font-size: 20px;
+}
+
+.company {
+    font-size: 12px;
+    margin-left: 25px;
+}

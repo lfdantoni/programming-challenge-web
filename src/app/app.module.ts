@@ -1,18 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
-import { AppComponent } from './app.component';
+import { HttpModule } from '@angular/http';
+import { ContactListComponent } from './contact-list/contact-list.component';
+import { ContainerComponent } from './container/container.component';
+import { FavoritePipe } from './pipes/filterItem.pipe';
+import { SortPipe} from './pipes/sortItem.pipe';
+import { ContactDetailComponent } from './contact-detail/contact-detail.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    ContactListComponent,
+    ContainerComponent,
+    FavoritePipe,
+    SortPipe,
+    ContactDetailComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ContainerComponent]
 })
 export class AppModule { }

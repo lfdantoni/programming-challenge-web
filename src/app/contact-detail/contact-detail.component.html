@@ -1,0 +1,46 @@
+<div class="general" *ngIf="contactSelectedData != null">
+  <p>Contacts</p>
+  <button type="button" (click)="setFavorite()">Mark as favorite</button>
+  
+  <img *ngIf="contactSelectedData.isFavorite == true" 
+        class="imgFavourite img-responsive" src="./../../assets/Favorite_True.png" alt="">
+  <img *ngIf="contactSelectedData.isFavorite == false" 
+        class="imgFavourite img-responsive" src="./../../assets/Favorite_True.png" alt="">
+  <img class="img-responsive img-avatar" 
+    src="{{contactSelectedData.largeImageURL}}" 
+    onerror="this.src='/../../assets/User_Large2x.png';" alt="">
+    <div *ngIf="contactSelectedData.name != null">
+      <h5 class="name" >{{contactSelectedData.name}}</h5>
+    </div>
+    <div *ngIf="contactSelectedData.companyName != null">
+      <p >{{contactSelectedData.companyName}}</p>
+    </div>
+    <div *ngIf="contactSelectedData.phone.work != null">
+      <p>Phone</p>
+      <h5 class="name">{{contactSelectedData.phone.work}}</h5>
+    </div>
+    <div *ngIf="contactSelectedData.phone.home != null">
+      <p>Phone</p>
+      <h5 class="name">{{contactSelectedData.phone.home}}</h5>
+    </div>
+    <div *ngIf="contactSelectedData.phone.mobile != null">
+      <p>Phone</p>
+      <h5 class="name">{{contactSelectedData.phone.mobile}}</h5>
+    </div>
+    <div *ngIf="contactSelectedData.address != null">
+      <p>Addres</p>
+      <h5 class="name">{{contactSelectedData.address.street}} 
+                       {{contactSelectedData.address.city}}
+                       {{contactSelectedData.address.state}}
+                       {{contactSelectedData.address.zipCode}}
+                       {{contactSelectedData.address.country}}</h5>
+    </div>
+    <div *ngIf="contactSelectedData.birthdate != null">
+      <p>Birthdate</p>
+      <h5 class="name">{{contactSelectedData.birthdate}}</h5>
+    </div>
+    <div *ngIf="contactSelectedData.emailAddress != null">
+      <p>EMAIL</p>
+      <h5 class="name">{{contactSelectedData.emailAddress}}</h5>
+    </div>
+</div>
